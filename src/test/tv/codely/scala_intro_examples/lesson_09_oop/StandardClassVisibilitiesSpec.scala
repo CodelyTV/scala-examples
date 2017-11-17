@@ -4,7 +4,7 @@ import org.scalatest.{Matchers, WordSpec}
 
 final class StandardClassVisibilitiesSpec extends WordSpec with Matchers {
   private val randomText    = "some text"
-  private val standardClass = new StandardClassVisibilities(attributeInConstruct = randomText)
+  private val standardClass = new StandardClass(attributeInConstruct = randomText)
 
   "Standard Class" should {
     "set as public the attributes defined in the constructor by default" in {

@@ -4,7 +4,7 @@ import org.scalatest.{Matchers, WordSpec}
 
 final class CaseClassVisibilitiesSpec extends WordSpec with Matchers {
   private val randomText = "some text"
-  private val caseClass  = CaseClassVisibilities(attributeInConstruct = randomText)
+  private val caseClass  = CaseClass(attributeInConstruct = randomText)
 
   "Case Class" should {
     "generate a public getter for the attributes defined in the constructor" in {
