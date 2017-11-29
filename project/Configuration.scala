@@ -4,7 +4,7 @@ import sbt.Keys._
 object Configuration {
   val settings = Seq(
     organization := "tv.codely",
-    scalaVersion := "2.12.4",
+    scalaVersion := "2.12.3",
 
     // Custom folders path (/src/main/scala and /src/test/scala by default)
     scalaSource in Compile := baseDirectory.value / "/src/main",
