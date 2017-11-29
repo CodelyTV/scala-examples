@@ -35,9 +35,7 @@ import tv.codely.scala_intro_examples.lesson_10_enums_vs_sealed_structures.WeekD
 
 val monday = WeekDay.Monday
 
-// Attributes inside enums without defining query methods in the type
-// Due to a bug in the REPL, this throws a NoSuchMethodError.
-//monday.isWorkingDay
+monday.isWorkingDay
 
 // Import the Type Alias in order to avoid specifying the WeekDay.Value type as the expected type
 import tv.codely.scala_intro_examples.lesson_10_enums_vs_sealed_structures.WeekDay._

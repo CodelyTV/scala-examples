@@ -15,12 +15,12 @@ sealed abstract class DomainError(
   override def compare(that: DomainError): Int = this.priority - that.priority
 }
 
-case object TooMuchCpuLoad extends DomainError(0, "too_much_cpu_load")
+case object TooMuchCpuLoad extends DomainError(priority = 0, mnemonic = "too_much_cpu_load")
 
-case object NotEnoughDiskSpace extends DomainError(1, "not_enough_disk_space")
+case object NotEnoughDiskSpace extends DomainError(priority = 1, mnemonic = "not_enough_disk_space")
 
 final case class UserWithoutPermissions(userId: UUID, action: String) extends DomainError(
-  100,
-  "user_without_permissions",
-  Map("user_id" -> userId.toString, "action" -> action)
+  priority = 100,
+  mnemonic = "user_without_permissions",
+  context = Map("user_id" -> userId.toString, "action" -> action)
 )

@@ -70,3 +70,5 @@ Future.successful(randomUser) // Future[User]
 Future.unit // Future[Unit]
 
 // ToDo: Different ExecutionContexts
+
+// ToDo: How to deal with _blocking_ operations
