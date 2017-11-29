@@ -15,6 +15,7 @@ object Configuration {
       "-deprecation", // Warnings deprecation
       "-feature", // Advise features
       "-unchecked", // More warnings. Strict
+      "-language:postfixOps", // Enable postfix operation such as 3 minutes
       "-Xlint", // More warnings when compiling
       "-Ywarn-dead-code",
       "-Ywarn-unused",
