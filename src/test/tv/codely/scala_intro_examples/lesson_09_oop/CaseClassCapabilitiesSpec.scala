@@ -25,7 +25,7 @@ final class CaseClassCapabilitiesSpec extends WordSpec with Matchers {
     "provide an unapply method making it easier deconstructing in pattern matching" in {
       val differentInstance = CaseClass.unapply(caseClass)
 
-      differentInstance shouldBe a[Option[(_, _)]]
+      differentInstance shouldBe a[Option[_]]
     }
     "provide an implemented toString method displaying all the attribtue values" in {
       caseClass.toString shouldBe "CaseClass(some text,Some default value)"
