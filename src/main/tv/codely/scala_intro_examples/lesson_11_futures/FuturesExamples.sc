@@ -23,8 +23,8 @@ def cutJaviHairAsync(): Future[Unit] = Future(cutJaviHair())
 
 // Blocks the current thread
 
-//cutRafaHair()
-//cutJaviHair()
+cutRafaHair()
+cutJaviHair()
 
 print("👋 After sync calls 🕋")
 
