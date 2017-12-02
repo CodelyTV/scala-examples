@@ -10,16 +10,19 @@ import tv.codely.scala_intro_examples.lesson_11_futures.Benchmarker._
  * 🚨 Error Handling
  * *********************************/
 
-val fridge = new InMemoryFridge
-
 // fallbackTo
 
 def readFromCache = Future.failed(new RuntimeException("Not found in cache"))
-def readFromSourceOfTruth = Future("lerele")
+def readFromSourceOfTruth = Future.successful("🐒 value from source of truth")
 
 val videoTitle = readFromCache fallbackTo readFromSourceOfTruth
 
 // /!\ fallbackTo parameter not passed by name
+
+val fridge = new BrokenFridge
+
+// Play replacing the fridge by the standard one
+// val fridge = new InMemoryFridge
 
 val sandwichFuture = for {
   cheeseOption <- fridge.takeCheese() recover { case NonFatal(e) => print(e.getMessage); None }

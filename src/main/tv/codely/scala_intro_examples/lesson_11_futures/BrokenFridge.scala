@@ -8,7 +8,7 @@ import scala.concurrent.Future
 final class BrokenFridge extends Fridge {
   def takeBread(): Future[Option[Bread]] = benchmark(
     taskName = "🍞 Take the bread",
-    task = Future.failed(throw new RuntimeException("Error while taking the bread from the fridge."))
+    task = Future.failed(new RuntimeException("Error while taking the bread from the fridge."))
   )
 
   def takeCheese(): Future[Option[Cheese]] = benchmark(

@@ -14,7 +14,7 @@ object Sandwich {
 }
 
 final case class Sandwich(ingredients: Seq[Ingredient]) {
-  require(ingredients.exists(isBread), "Bread is mandatory to make a Sandwich")
+  require(ingredients.exists(isBread), "👮‍🍞 Bread is mandatory to make a Sandwich")
 
   private def isBread(ingredient: Ingredient) = ingredient.getClass == Bread.getClass
 }
