@@ -9,4 +9,5 @@ object Ingredients {
   final case class Egg() extends Ingredient
   final case class Bacon() extends Ingredient
   final case class FriedBacon(bacon: Bacon) extends Ingredient
+  final case class FriedEgg(egg: Egg) extends Ingredient
 }
