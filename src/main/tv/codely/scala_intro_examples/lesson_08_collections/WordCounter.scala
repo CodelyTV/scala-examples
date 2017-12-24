@@ -1,9 +1,10 @@
 package tv.codely.scala_intro_examples.lesson_08_collections
 
 final class WordCounter {
-  // @ToDo: Here you have your exercise!
-  // @see tv.codely.scala_intro_examples.lesson_08_collections.WordCounterSpec
   def countWords(text: String): Int = {
-    0
+    if (text.isEmpty)
+      return 0
+    val words = text.trim.split(" ")
+    words.length
   }
 }
