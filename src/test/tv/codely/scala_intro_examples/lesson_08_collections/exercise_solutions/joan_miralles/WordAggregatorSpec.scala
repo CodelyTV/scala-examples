@@ -1,4 +1,4 @@
-package tv.codely.scala_intro_examples.lesson_08_collections
+package tv.codely.scala_intro_examples.lesson_08_collections.exercise_solutions.joan_miralles
 
 import org.scalatest.{Matchers, WordSpec}
 
@@ -10,9 +10,7 @@ final class WordAggregatorSpec extends WordSpec with Matchers {
 
       aggregator.aggregateWords(emptyText) shouldBe Map.empty
     }
-    // @ToDo: Here you have your exercise!
-    // Change this "ignore" keyword for the "in" one and make this test pass!
-    "return the number of words occurrences for each word given a non empty text" ignore {
+    "return the number of words occurrences for each word given a non empty text" in {
       val aggregator = new WordAggregator
       val nonEmptyText = "Hi hi hi all"
       val wordsOccurrences = Map(

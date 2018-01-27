@@ -10,16 +10,11 @@ final class WordCounterSpec extends WordSpec with Matchers {
 
       counter.countWords(emptyText) shouldBe 0
     }
-    "return the number of words given a non empty text" in {
+    // @ToDo: Here you have your exercise!
+    // Change this "ignore" keyword for the "in" one and make this test pass!
+    "return the number of words given a non empty text" ignore {
       val counter = new WordCounter
       val nonEmptyText = "Hi all"
-      val wordsNumber = 2
-
-      counter.countWords(nonEmptyText) shouldBe wordsNumber
-    }
-    "return the number of words given a non empty text with spaces" in {
-      val counter = new WordCounter
-      val nonEmptyText = " Hi all "
       val wordsNumber = 2
 
       counter.countWords(nonEmptyText) shouldBe wordsNumber
