@@ -1,23 +1,28 @@
 package tv.codely.scala_intro_examples.lesson_09_oop.exercise_solutions.joan_miralles_solution
 
-import java.security.InvalidParameterException
-
 object Email {
+  val validEmailTest = raw"^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$$"
+
   def apply(completeEmail: String): Email = {
-    val atIndex = completeEmail.indexOf("@")
-    if (completeEmail.isEmpty || !completeEmail.contains("@") || !completeEmail.substring(completeEmail.indexOf("@")).contains(".")) {
-      throw new InvalidParameterException(s"$completeEmail is not a valid e-mail")
+    if (!completeEmail.matches(validEmailTest)) {
+      throw new IllegalArgumentException(s"$completeEmail is not a valid e-mail")
     }
-    Email(completeEmail.substring(0, atIndex), completeEmail.substring(atIndex + 1, completeEmail.length))
+    Email(Local.fromEmail(completeEmail), Domain.fromEmail(completeEmail))
   }
 }
 
-final case class Email(local: String = "soporte", domain: String = "codely.tv") {
+final case class Email(local: Local = Local("soporte"), domain: Domain = Domain("codely.tv"))
 
-  private val email = s"$local@$domain"
-
-  def getEmail: String = {
-    email
-  }
-
+object Local {
+  def fromEmail(email: String): Local = Local(email.substring(0, email.indexOf("@")))
 }
+
+final case class Local(value: String)
+
+object Domain {
+  def fromEmail(email: String): Domain = {
+    Domain(email.substring(email.indexOf("@") + 1))
+  }
+}
+
+final case class Domain(value: String)
