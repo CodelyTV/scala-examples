@@ -2,6 +2,6 @@ package tv.codely.scala_intro_examples.lesson_07_generics.exercise_solutions.joa
 
 import scala.concurrent.Future
 
-trait GenericFryer[IngredientType, FriedIngredientType] {
+trait Fryer[IngredientType, FriedIngredientType] {
   def fry(ingredientType: IngredientType): Future[FriedIngredientType]
 }

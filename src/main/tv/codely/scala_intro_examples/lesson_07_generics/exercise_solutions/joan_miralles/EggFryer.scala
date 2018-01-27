@@ -5,7 +5,7 @@ import tv.codely.scala_intro_examples.lesson_07_generics.exercise_solutions.joan
 import scala.concurrent.duration._
 import scala.concurrent.{ExecutionContext, Future}
 
-class EggFryer(implicit ec: ExecutionContext) extends GenericFryer[Egg, FriedEgg] {
+class EggFryer(implicit ec: ExecutionContext) extends Fryer[Egg, FriedEgg] {
   private val minFryTime = 6.second
 
   override def fry(egg: Egg) = Future {
