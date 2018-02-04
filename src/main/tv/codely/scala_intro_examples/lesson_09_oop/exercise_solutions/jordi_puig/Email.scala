@@ -5,12 +5,11 @@ object Email {
   val emailRegex = raw"""(\w+)@([\w\.]+)"""
 
   def apply(email: String): Email = {
-    if (!validate(email)) throw new IllegalArgumentException("Invalid email format")
-
+    require(validate(email),"Invalid email format")
     Email(Local.fromEmail(email),Domain.fromEmail(email))
   }
 
-  def validate(email: String): Boolean = email.matches(emailRegex)
+  private def validate(email: String): Boolean = email.matches(emailRegex)
 }
 
 final case class Email(local: Local, domain: Domain) {

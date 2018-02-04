@@ -25,6 +25,5 @@ class EmailSpec extends WordSpec with Matchers {
         Email("staffcodely.tv")
       }
     }
-
   }
 }
