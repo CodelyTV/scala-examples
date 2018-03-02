@@ -1,9 +1,7 @@
-import java.util.{Calendar, Date}
+import com.github.nscala_time.time.Imports._
 
 
-def clock(calendar: Calendar) = calendar.getTime
-
-def myLogger(clock: => Date)
+def myLogger(clock: => DateTime)
             (printer: String => Unit)
             (scope: String)
             (level: String)
@@ -11,7 +9,7 @@ def myLogger(clock: => Date)
 : Unit = printer(s"$clock - $scope - $level - $message")
 
 def myAppLogger(level: String)(message: String): Unit =
-  myLogger(clock(Calendar.getInstance()))(println)("My App")(level)(message)
+  myLogger(DateTime.now)(println)("My App")(level)(message)
 
 val debugLogger = myAppLogger("DEBUG")(_)
 val errorLogger = myAppLogger("ERROR")(_)
