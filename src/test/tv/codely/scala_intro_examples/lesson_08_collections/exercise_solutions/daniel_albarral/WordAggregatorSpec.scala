@@ -1,0 +1,26 @@
+package tv.codely.scala_intro_examples.lesson_08_collections.exercise_solutions.daniel_albarral
+
+import org.scalatest.{Matchers, WordSpec}
+
+final class WordAggregatorSpec extends WordSpec with Matchers {
+  "Word Aggregator" should {
+    "return an empty map given an empty text" in {
+      val aggregator = new WordAggregator
+      val emptyText = ""
+
+      aggregator.aggregateWords(emptyText) shouldBe Map.empty
+    }
+
+    "return the number of words occurrences for each word given a non empty text" in {
+      val aggregator = new WordAggregator
+      val nonEmptyText = "Hi hi hi all"
+      val wordsOccurrences = Map(
+        "hi" -> 3,
+        "all" -> 1
+      )
+
+      aggregator.aggregateWords(nonEmptyText) shouldBe wordsOccurrences
+
+    }
+  }
+}
