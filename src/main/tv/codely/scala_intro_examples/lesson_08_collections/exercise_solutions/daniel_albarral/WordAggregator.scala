@@ -7,7 +7,7 @@ final class WordAggregator {
     case _ =>
       val arrayWords = (text split "\\W+") map (_.toLowerCase)
       val mapWords = arrayWords groupBy (x => x)
-      mapWords transform ((x, y) => y length)
+      mapWords mapValues(_.length)
   }
 
 }
