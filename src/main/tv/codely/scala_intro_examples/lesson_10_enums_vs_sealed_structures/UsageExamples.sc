@@ -80,3 +80,5 @@ someErrors.map {
   case other: DomainError                            =>
     s"/!\\ Critical /!\\: ${other.priority}"
 }
+
+VideoType.values
