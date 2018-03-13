@@ -9,9 +9,9 @@ import tv.codely.scala_intro_examples.lesson_10_enums_vs_sealed_structures.exerc
 sealed abstract class Food(override val id: UUID, val category: FoodCategory)
   extends PicoteriaProduct with GenericFood {
 
-  val getForcefulness: Int = category.forcefulness
+  val forcefulness: Int = category.forcefulness
 
-  def getFatLevel: String = category match {
+  val fatLevel: String = category match {
     case Furralleros => "Epic"
     case NotSoFurralleros => "Normal"
     case _ => "Meh"

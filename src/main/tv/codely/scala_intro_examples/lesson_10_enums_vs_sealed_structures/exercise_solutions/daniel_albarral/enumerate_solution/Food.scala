@@ -11,9 +11,9 @@ sealed abstract class Food(override val id: UUID, val category: FoodCategory)
 
   //  FIXME: I don't have fucking idea of how to access the attribute forcefulness
   //  from the category attribute. HELP!!! 😭
-  val getForcefulness: Int = 1
+  val forcefulness: Int = 1
 
-  def getFatLevel: String = category match {
+  val fatLevel: String = category match {
     case FoodCategory.Furralleros => "Epic"
     case FoodCategory.NotSoFurralleros => "Normal"
     case _ => "Meh"

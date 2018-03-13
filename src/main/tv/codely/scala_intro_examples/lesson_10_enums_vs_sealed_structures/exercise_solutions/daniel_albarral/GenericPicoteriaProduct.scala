@@ -8,11 +8,9 @@ trait PicoteriaProduct {
 
 trait GenericFood extends Ordered[GenericFood] {
 
-  override def compare(that: GenericFood): Int = that.getForcefulness - getForcefulness
+  val forcefulness: Int
+  val fatLevel: String
 
-  val getForcefulness: Int
-
-  def getFatLevel: String
-
+  override def compare(that: GenericFood): Int = that.forcefulness - forcefulness
 
 }

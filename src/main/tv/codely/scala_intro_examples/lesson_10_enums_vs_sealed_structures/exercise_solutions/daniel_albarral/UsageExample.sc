@@ -4,6 +4,7 @@
   * --> Run it in a repel ! <--
   * If some one have some idea of what's happening
   * any help is welcome.
+  * SOLVED: http://cort.as/-2rFf, thx @JavierCane
   */
 
 import java.util.UUID
@@ -18,11 +19,11 @@ def printerExample(hint: String,
   println("* Original data set")
   println(orders)
   println("* FatLevel with the order of the original")
-  println(orders map (_.getFatLevel))
+  println(orders map (_.fatLevel))
   println("* Data set ordered by forcefulness of the orders")
   println(orders sorted)
   println("* FatLevel with the order of the sorted")
-  println((orders sorted) map (_.getFatLevel))
+  println((orders sorted) map (_.fatLevel))
 }
 
 val sealedFood = Seq[sealed_solution.Food](
