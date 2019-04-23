@@ -1,3 +1,5 @@
+import javax.swing.text.Document
+
 val intSeq = Seq(1, 2, 3)
 val stringSeq = Seq("uno", "dos", "tres ")
 
@@ -15,4 +17,3 @@ class FakeUserRepository extends Repository[UserId, User] {
 
   def search(id: UserId): User = User(id)
 }
-

@@ -1,0 +1,5 @@
+package tv.codely.scala_intro_examples.lesson_07_generics.exercise_solutions.juanpablo_lopez
+
+trait FileExtension
+class PDF extends FileExtension
+class JPEG extends FileExtension
