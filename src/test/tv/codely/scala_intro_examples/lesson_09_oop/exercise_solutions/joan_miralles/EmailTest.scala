@@ -1,4 +1,4 @@
-package tv.codely.scala_intro_examples.lesson_09_oop.exercise_solutions.joan_miralles_solution
+package tv.codely.scala_intro_examples.lesson_09_oop.exercise_solutions.joan_miralles
 
 import org.scalatest.{Matchers, WordSpec}
 
