@@ -1,4 +1,4 @@
-package tv.codely.scala_intro_examples.lesson_10_enums_vs_sealed_structures.joan_miralles
+package tv.codely.scala_intro_examples.lesson_10_enums_vs_sealed_structures.exercise_solutions.joan_miralles
 
 object IngestibleEnumType extends Enumeration {
   type IngestibleType = Value

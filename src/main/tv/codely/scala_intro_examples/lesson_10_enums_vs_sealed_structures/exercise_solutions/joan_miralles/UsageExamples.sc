@@ -1,4 +1,5 @@
-import tv.codely.scala_intro_examples.lesson_10_enums_vs_sealed_structures.joan_miralles.{Furralleros, IngestibleEnumType, JustInCase, NotSoFurralleros}
+import tv.codely.scala_intro_examples.lesson_10_enums_vs_sealed_structures.exercise_solutions.joan_miralles.{Furralleros, IngestibleEnumType, IngestibleSealedType, JustInCase, NotSoFurralleros}
+import tv.codely.scala_intro_examples.lesson_10_enums_vs_sealed_structures.exercise_solutions.juanpablo_lopez.joan_miralles.{Furralleros, IngestibleSealedType, JustInCase, NotSoFurralleros}
 
 // Direct instantiation
 val furralleros = IngestibleEnumType.Furralleros
@@ -15,8 +16,6 @@ IngestibleEnumType.values foreach println
 /** **********************************
   * Simple sealed structures example
   * *********************************/
-
-import tv.codely.scala_intro_examples.lesson_10_enums_vs_sealed_structures.joan_miralles._
 
 // Try removing one of the cases! That's the power of sealed classes and traits (structures)
 def isHealthyFood(ingestible: IngestibleSealedType): Boolean = ingestible match {
