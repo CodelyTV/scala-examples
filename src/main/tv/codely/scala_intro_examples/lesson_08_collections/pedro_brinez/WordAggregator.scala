@@ -7,7 +7,8 @@ final class WordAggregator {
     if (text.isEmpty)
       Map.empty
     else
-      text.split(" ")
+      text.toLowerCase
+        .split(" ")
         .groupBy(identity)
         .map(wordOccurrence => (wordOccurrence._1, wordOccurrence._2.length))
   }

@@ -12,7 +12,7 @@ final class WordAggregatorSpec extends WordSpec with Matchers {
     }
     // @ToDo: Here you have your exercise!
     // Change this "ignore" keyword for the "in" one and make this test pass!
-    "return the number of words occurrences for each word given a non empty text" ignore {
+    "return the number of words occurrences for each word given a non empty text" in {
       val aggregator = new WordAggregator
       val nonEmptyText = "Hi hi hi all"
       val wordsOccurrences = Map(
